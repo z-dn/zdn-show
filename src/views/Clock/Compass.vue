@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import {watch,ref,reactive,useTemplateRef, onMounted, onUnmounted} from 'vue';
+import {watch,ref,reactive, onMounted, onUnmounted} from 'vue';
 
 let timerId: number;
 
