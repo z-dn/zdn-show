@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, type RouteRecordRaw, type Router } from 'vue-router';
+import { createRouter, createWebHashHistory, type RouteRecordRaw, type Router } from 'vue-router';
 
 import Home from '@/views/Home.vue';
 import ClockRoutes from '@/router/Clock/index';
@@ -24,7 +24,7 @@ const routes: Array<RouteRecordRaw> = [
 
   // 创建路由实例
 const router: Router = createRouter({
-    history: createWebHistory(),
+    history: createWebHashHistory(),
     routes
 });
 
