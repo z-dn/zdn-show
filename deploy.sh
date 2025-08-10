@@ -36,7 +36,8 @@ cp -rf dist/* "$TARGET_DIR/"
 # 7. 提交更改
 echo "💾 提交更改..."
 git add "$TARGET_DIR"
-git commit -m "Deploy $SOURCE_BRANCH build to $TARGET_DIR" || {
+current_time=$(date "+%Y-%m-%d %H:%M:%S")
+git commit -m "Deploy $SOURCE_BRANCH build to $TARGET_DIR at $current_time" || {
   echo "⚠️ 无新更改可提交！"
 }
 
@@ -49,5 +50,3 @@ git push origin "$TARGET_BRANCH" --force-with-lease || {
 
 # 9. 切换回源码分支
 git checkout "$SOURCE_BRANCH"
-
-echo "✅ 成功将 $SOURCE_BRANCH 的构建文件部署到 $TARGET_BRANCH/$TARGET_DIR"
