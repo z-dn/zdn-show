@@ -37,7 +37,7 @@ cp -rf dist/* "$TARGET_DIR/"
 echo "💾 提交更改..."
 git add "$TARGET_DIR"
 current_time=$(date "+%Y-%m-%d %H:%M:%S")
-git commit -m "Deploy $SOURCE_BRANCH build to $TARGET_DIR at $current_time" || {
+git commit -m "deploy $SOURCE_BRANCH build to $TARGET_DIR at $current_time" || {
   echo "⚠️ 无新更改可提交！"
 }
 
